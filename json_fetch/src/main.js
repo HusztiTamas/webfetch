@@ -2,7 +2,7 @@ let users = [];
 
 const init = async () => {
   const loadData = async () => {
-    const valasz = await fetch("https://jsonplaceholder.typicode.com/users");
+    const valasz = await fetch("http://localhost:3000/users");
     users = await valasz.json();
   };
   await loadData();
@@ -16,13 +16,13 @@ let tablazatGeneralas = () => {
     const sor = document.createElement("tr");
 
     const cellaUserName = document.createElement("td");
-    cellaUserName.textContent = user.name;
+    cellaUserName.textContent = user.nev;
 
-    const cellaUserEmail = document.createElement("td");
-    cellaUserEmail.textContent = user.email;
+    const cellaUserlass = document.createElement("td");
+    cellaUserlass.textContent = user.osztaly;
 
     sor.appendChild(cellaUserName);
-    sor.appendChild(cellaUserEmail);
+    sor.appendChild(cellaUserlass);
     tablazat.appendChild(sor);
   });
 };
