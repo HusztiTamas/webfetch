@@ -7,6 +7,7 @@ const init = async () => {
   };
   await loadData();
   console.table(users);
+  tablazatGeneralas();
 };
 
 let tablazatGeneralas = () => {
